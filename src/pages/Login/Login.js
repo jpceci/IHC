@@ -7,7 +7,7 @@ const Login = () => {
   return (<div className="signup_container">
     <div className="signup_form_container">
       <div className="left" >
-        <img src={logo} style={{ width: '70%', height: 'auto' }} />
+        <img src={logo} alt= "hola" style={{ width: '70%', height: 'auto' }} />
       </div>
       <div className="right">
         <form className="form_container">
