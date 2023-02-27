@@ -1,4 +1,3 @@
-
 .navContainer h1 {
 	color: rgba(0, 0, 0, 0.6);
 	font-size: 25px;
@@ -18,6 +17,14 @@
 	cursor: pointer;
 	margin-right: 5%;
     margin-top: auto;
+}
+
+.blue_btn {
+    background-color: #006DF4;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+
 }
 
 .navContainer{

@@ -1,0 +1,49 @@
+.addition {
+    display: flex;
+}
+
+.addition__column {
+    flex: 1;
+    padding-left: 1rem;
+    text-align: left;
+    padding-top: 2%;
+}
+
+.addition__column h1 {
+    font-size: 40px;
+    color: #10344E;
+}
+
+
+.addition__column2 {
+    flex: 1;
+    padding: 1rem;
+    text-align: right;
+    line-height: 0;
+
+}
+
+.addition__column2 h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.addition__column2 h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.addition__column2 h3 {
+    font-size: 18px;
+}
+
+.addition__column2 h2 {
+    font-size: 18px;
+    color: #006DF4;
+}
+
+.addition__column+.addition__column2 {
+    border-left: 1px solid transparent;
+}
+
+/* Aqui va el contenedor */

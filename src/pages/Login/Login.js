@@ -9,7 +9,7 @@ function Login() {
   const onSubmit = event => {
     event.preventDefault()
 
-    navigate('/inscription')
+    navigate('/menu')
   }
 
   return (<div className="signup_container">
@@ -35,7 +35,7 @@ function Login() {
             name="password"
             required
             className="input" />
-          <button type="submit" className="blue_btn">
+          <button type="submit" className="blue_btn1">
             Ingresar
           </button>
         </form>

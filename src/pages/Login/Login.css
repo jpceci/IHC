@@ -52,7 +52,7 @@
 }
 
 .form_container h4 {
-    font-size: 14px;
+    font-size: 16px;
     text-align: left;
     font-weight: 500;
     height: 2px;
@@ -70,7 +70,7 @@
     font-size: 14px;
 }
 
-.blue_btn {
+.blue_btn1 {
     border: none;
     outline: none;
     padding: 12px 0;
@@ -78,12 +78,12 @@
     border-radius: 20px;
     width: 180px;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
 
 }
 
-.blue_btn {
+.blue_btn1 {
     background-color: #006DF4;
     color: white;
     margin: auto;

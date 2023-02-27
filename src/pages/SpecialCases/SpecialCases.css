@@ -1,0 +1,98 @@
+.specialCases {
+    display: flex;
+}
+
+.specialCases__column {
+    flex: 1;
+    padding-left: 1rem;
+    text-align: left;
+    padding-top: 2%;
+}
+
+.specialCases__column h1 {
+    font-size: 40px;
+    color: #10344E;
+}
+
+
+.specialCases__column2 {
+    flex: 1;
+    padding: 1rem;
+    text-align: right;
+    line-height: 0;
+
+}
+
+.specialCases__column2 h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.specialCases__column2 h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.specialCases__column2 h3 {
+    font-size: 18px;
+}
+
+.specialCases__column2 h2 {
+    font-size: 18px;
+    color: #006DF4;
+}
+
+.specialCases__column+.specialCases__column2 {
+    border-left: 1px solid transparent;
+}
+
+/* boton */
+
+.gray_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: #006DF4;
+    border-radius: 20px;
+    width: 180px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    width: 70%;
+
+}
+
+.gray_btn {
+    background-color: #006DF4;
+    color: white;
+    margin: auto;
+    margin-top: 10px;
+
+}
+
+.buttonContainer {
+    padding: 5%;
+    align-items: center;
+}
+
+.button {
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    width: 60%;
+    align-items: center;
+    font-weight: 700;
+}
+
+.button.active {
+    background-color: #006DF4;
+    color: #fff;
+}
+
+.button.inactive {
+    background-color: #7C7C7C;
+    color: #333;
+}
