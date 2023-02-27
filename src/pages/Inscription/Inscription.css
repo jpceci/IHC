@@ -1,0 +1,130 @@
+.inscription {
+    display: flex;
+}
+
+.inscription__column {
+    flex: 1;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.inscription__column h1 {
+    font-size: 40px;
+    color: #10344E;
+}
+
+
+.inscription__column2 {
+    flex: 1;
+    padding: 1rem;
+    text-align: right;
+    line-height: 0;
+
+}
+
+.inscription__column2 h5 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.inscription__column2 h4 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.inscription__column2 h3 {
+    font-size: 14px;
+}
+
+.inscription__column2 h2 {
+    font-size: 15px;
+    color: #006DF4;
+}
+
+.inscription__column+.inscription__column2 {
+    border-left: 1px solid transparent;
+}
+
+/* Aqui va el contenedor */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #F5F5F5;
+}
+
+.container__navbar {
+    background-color: #10344E;
+    color: #fff;
+    justify-content: center; 
+    display: flex;
+    height: 49px;
+    align-items: center;
+}
+
+.container__navbar1 {
+    flex: 0.45;
+    padding-left: 30px;
+}
+
+.container__navbar2 {
+    flex: 0.45;
+    position: relative;
+
+}
+
+.container__navbar3 {
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__navbar li:first-child {
+    margin-left: 0;
+}
+
+.container__navbar h4 {
+    color: #fff;
+    font-size: 20px;
+    text-align: left;
+}
+
+.container__navbar h3 {
+    color: #fff;
+    font-size: 20px;
+    text-align: right;
+}
+
+.container__navbar h2 {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container__content {
+    display: flex;
+    flex: 1;
+    overflow: auto;
+}
+
+.container__column {
+    flex: 1;
+    padding: 1rem;
+}
+.container__column2 {
+    flex: 2;
+    padding: 1rem;
+}
+
+.container__column+.container__column2 {
+    border-left: 1px solid black;
+}
+
+.container__navbar1+.container__navbar2{
+    border-left: 1px transparent;
+}
+
+.container__navbar2+.container__navbar3{
+    border-left: 1px transparent;
+}

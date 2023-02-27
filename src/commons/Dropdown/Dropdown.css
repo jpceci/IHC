@@ -1,0 +1,24 @@
+.collapse-button {
+    width: 100%;
+    background-color: rgb(32 114 154 /48%);
+    border-radius: 10px;
+    border-color: transparent;
+    height: 40px;
+    cursor: pointer;
+    padding: 0px 20px;
+}
+  .collapse-button .word1 {
+    display: inline;
+    float: left;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .collapse-button .word2 {
+    display: inline;
+    float: right;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
