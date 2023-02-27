@@ -1,0 +1,19 @@
+.check {
+    width: 10%;
+
+}
+
+.rows {
+    justify-content: left;
+    width: 10%
+}
+
+.table {
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.table td {
+    border: 1px solid black;
+    border-radius: 10px;
+}

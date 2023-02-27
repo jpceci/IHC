@@ -6,6 +6,7 @@
     height: 40px;
     cursor: pointer;
     padding: 0px 20px;
+    padding-top: 1.8%;
 }
   .collapse-button .word1 {
     display: inline;
@@ -13,6 +14,7 @@
     color: black;
     font-size: 18px;
     font-weight: 700;
+    padding-bottom: 1.8%;
   }
   
   .collapse-button .word2 {
@@ -21,4 +23,5 @@
     color: black;
     font-size: 16px;
     font-weight: 600;
+    
   }

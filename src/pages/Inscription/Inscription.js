@@ -2,6 +2,8 @@ import React from "react";
 import Layout from "../../commons/NavBar/Layout";
 import "./Inscription.css";
 import Dropdown from "../../commons/Dropdown/Dropdown";
+import Schedule from "../../commons/Schedule/Horario";
+import ScheduleDetails from "../../commons/ScheduleDetails/ScheduleDetails";
 
 function Inscripction() {
     const Materias = [
@@ -13,6 +15,16 @@ function Inscripction() {
         "INF123",
         "INF122",
     ];
+
+    const options = [
+        { id: "1", columna1: 'option1', columna2: 'Opción 1' , columna3:'eriktrolo'},
+        { id: "2",  columna1: 'option2', columna2: 'Opción 2' },
+        { id: "3",  columna1: 'option3', columna2: 'Opción 3' },
+      ];
+    
+      function handleOptionSelect(option) {
+        console.log('Selected option:', option);
+      }
 
 
     return (
@@ -44,13 +56,12 @@ function Inscripction() {
                     <div className="container__column">
                         {Materias.map((materia, indice) => (
                             <Dropdown triggerText={materia} sigla={Siglas[indice]}>
-                                hola
+                                <ScheduleDetails data={options}></ScheduleDetails>
                             </Dropdown>
                         ))}
                     </div>
                     <div className="container__column2">
-                        <h2>Columna 2</h2>
-                        <p>Contenido de la columna 1</p>
+                        <Schedule/>
                     </div>
                 </div>
             </div>

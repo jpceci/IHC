@@ -16,7 +16,7 @@ function DropDown(props) {
         <div>
             <button onClick={toggleDropDown} className="collapse-button">
                 <span className="word1">{props.triggerText}</span>
-                <span className="word2">{props.sigla}</span>
+                <span className="word2">{props.sigla} ▼</span>
             </button>
             {isOpen && props.children}
         </div>

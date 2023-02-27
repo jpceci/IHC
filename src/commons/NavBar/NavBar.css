@@ -2,7 +2,7 @@
 .navContainer h1 {
 	color: rgba(0, 0, 0, 0.6);
 	font-size: 25px;
-	margin-left: 60px;
+	margin-left: 3%;
     font-weight: 640;
 }
 
@@ -16,7 +16,7 @@
 	font-weight: bold;
 	font-size: 14px;
 	cursor: pointer;
-	margin-right: 20px;
+	margin-right: 5%;
     margin-top: auto;
 }
 
