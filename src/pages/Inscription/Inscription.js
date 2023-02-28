@@ -4,6 +4,7 @@ import "./Inscription.css";
 import Dropdown from "../../commons/Dropdown/Dropdown";
 import Schedule from "../../commons/Schedule/Horario";
 import ScheduleDetails from "../../commons/ScheduleDetails/ScheduleDetails";
+import ConfirmButton from "../../commons/WindowConfirmation/WindowConfirmation";
 
 function Inscripction() {
     const randomColor = () => {
@@ -161,7 +162,7 @@ function Inscripction() {
         }];
 
     var [schedules, setSchedules] = useState([]);
-    var [selectedRows, setSelectedRows] = useState([{ "group": null }, { "group": null },{ "group": null }, { "group": null },{ "group": null }]);
+    var [selectedRows, setSelectedRows] = useState([{ "group": null }, { "group": null }, { "group": null }, { "group": null }, { "group": null }]);
     const prueba = (valor) => {
         const index = parseInt(valor.id) - 1;
         if (!valor.groups) {
@@ -271,6 +272,9 @@ function Inscripction() {
                     </div>
                     <div className="container__column2">
                         <Schedule schedules={schedules} />
+                        <div className="buttonContainer">
+                            <ConfirmButton />
+                        </div>
                     </div>
                 </div>
             </div>

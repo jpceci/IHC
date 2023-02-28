@@ -119,7 +119,7 @@
 }
 
 .container__column+.container__column2 {
-    border-left: 1px solid black;
+    border-left: 1px transparent;
 }
 
 .container__navbar1+.container__navbar2{
