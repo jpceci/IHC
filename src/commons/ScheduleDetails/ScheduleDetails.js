@@ -1,41 +1,80 @@
 import React, { useState, useEffect } from 'react';
 import "./ScheduleDetails.css";
 
-function ScheduleDetails({ data, result }) {
-    var [selectedRow, setSelectedRow] = useState();
+function ScheduleDetails({ data, result, selected }) {
+    // var [selectedRow, setSelectedRow] = useState();
+    // console.log("Me he generado");
+    // console.log(element);
 
-    useEffect(() => {
-        result(selectedRow);
-    }, [selectedRow]);
+    // useEffect(() => {
+    //     if (selectedRow) {
+    //         const schedule = {
+    //             "id": data.id,
+    //             "acronym": data.acronym,
+    //             "subject": data.subject,
+    //             "isBloqued": data.isBloqued,
+    //             "color": data.color,
+    //             "haveError": data.haveError,
+    //             "groups": selectedRow,
+    //         };
+    //         result(schedule);
+    //     }
+    // }, [selectedRow]);
 
     const handleCheckboxChange = (e, id) => {
-        setSelectedRow(id);
-
+        // console.log(id);
+        if (e.target.checked) {
+            const schedule = {
+                "id": data.id,
+                "acronym": data.acronym,
+                "subject": data.subject,
+                "isBloqued": data.isBloqued,
+                "color": data.color,
+                "haveError": data.haveError,
+                "groups": id,
+            };
+            result(schedule);
+            // setSelectedRow(id);
+        } else {
+            const schedule = {
+                "id": data.id,
+                "acronym": data.acronym,
+                "subject": data.subject,
+                "isBloqued": data.isBloqued,
+                "color": data.color,
+                "haveError": data.haveError,
+                "groups": null,
+            };
+            result(schedule);
+            // setSelectedRow();
+        }
+        // setSelectedRow(id);
     };
 
     return (
         <div style={{ marginTop: "2.5%", paddingLeft: "4%", maxWidth: "90%" }}>
             <table>
                 <tbody>
-                    {data.groups.map((materia) => (
-                        <tr key={materia.group}>
-                            <td className='description'>
-                                <div>{materia.group + "-" + materia.teacher}<br></br></div>
-                                <div className="quotas">Cupos - {materia.quotes}</div>
+                    {data.groups.map((materia) => {
+                        return (
+                            <tr key={materia.group}>
+                                <td className='description'>
+                                    <div>{materia.group + "-" + materia.teacher}<br></br></div>
+                                    <div className="quotas">Cupos - {materia.quotes}</div>
 
-                                <div>Lu 10:00 - 11:30 | Ma 10:00 - 11:30</div>
-                            </td>
-                            <td className='description'>
-                                <input
-                                    type="checkbox"
-                                    style={{ width: "22px", height: "17px", float: "right", borderColor: "black" }}
-                                    checked={selectedRow === materia}
-                                    onChange={(e) => handleCheckboxChange(e, materia)}
-                                />
+                                    <div>{materia.description}</div>
+                                </td>
+                                <td className='description'>
+                                    <input
+                                        type="checkbox"
+                                        style={{ width: "22px", height: "17px", float: "right", borderColor: "black" }}
+                                        checked={selected.group === materia.group}
+                                        onChange={(e) => handleCheckboxChange(e, materia)}
+                                    />
+                                </td>
 
-                            </td>
-                        </tr>
-                    ))}
+                            </tr>)
+                    })}
                 </tbody>
             </table>
         </div>

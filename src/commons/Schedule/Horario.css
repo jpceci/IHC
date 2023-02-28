@@ -9,7 +9,7 @@ td {
   text-align: center;
 }
 
-th {
+.scheduleHeader {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
