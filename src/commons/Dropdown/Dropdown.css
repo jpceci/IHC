@@ -3,10 +3,11 @@
     background-color: rgb(32 114 154 /48%);
     border-radius: 10px;
     border-color: transparent;
-    height: 40px;
+    height: 44px;
     cursor: pointer;
     padding: 0px 20px;
     padding-top: 1.8%;
+    margin-top: 3%;
 }
   .collapse-button .word1 {
     display: inline;
@@ -21,7 +22,7 @@
     display: inline;
     float: right;
     color: black;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 600;
     
   }

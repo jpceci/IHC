@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./ScheduleDetails.css";
 
-function ScheduleDetails({ data }) {
+function ScheduleDetails({ data, result }) {
+    var [selectedRow, setSelectedRow] = useState();
 
-    const [selectedRows, setSelectedRows] = useState([]);
+    useEffect(() => {
+        result(selectedRow);
+    }, [selectedRow]);
 
     const handleCheckboxChange = (e, id) => {
-        if (e.target.checked) {
-            setSelectedRows([...selectedRows, id]);
-        } else {
-            setSelectedRows(selectedRows.filter((rowId) => rowId !== id));
-        }
+        setSelectedRow(id);
+
     };
 
     return (
-        <div className='table'>
-            <table className='table'>
-                <tbody className='table'>
-                    {data.map((row) => (
-                        <tr key={row.id} className ='rows'>
-                            <td className='check'>
+        <div style={{ marginTop: "2.5%", paddingLeft: "4%", maxWidth: "90%" }}>
+            <table>
+                <tbody>
+                    {data.groups.map((materia) => (
+                        <tr key={materia.group}>
+                            <td className='description'>
+                                <div>{materia.group + "-" + materia.teacher}<br></br></div>
+                                <div className="quotas">Cupos - {materia.quotes}</div>
+
+                                <div>Lu 10:00 - 11:30 | Ma 10:00 - 11:30</div>
+                            </td>
+                            <td className='description'>
                                 <input
                                     type="checkbox"
-                                    checked={selectedRows.includes(row.id)}
-                                    onChange={(e) => handleCheckboxChange(e, row.id)}
+                                    style={{ width: "22px", height: "17px", float: "right", borderColor: "black" }}
+                                    checked={selectedRow === materia}
+                                    onChange={(e) => handleCheckboxChange(e, materia)}
                                 />
+
                             </td>
-                            <td>{row.columna1}</td>
-                            <td>{row.columna2}</td>
-                            <td>{row.columna3}</td>
                         </tr>
                     ))}
                 </tbody>

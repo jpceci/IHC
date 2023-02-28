@@ -10,6 +10,64 @@ function Inscripction() {
         "Física I",
         "Estructuras Discretas",
     ];
+    const randomColor = () => {
+        return "hsl(" + 360 * Math.random() + ',' +
+            (35 + 60 * Math.random()) + '%,' +
+            (55 + 40 * Math.random()) + '%)';
+    }
+    const Materiass = [{
+        "id": "1",
+        "acronym": "INF123",
+        "subject": "FISICA I",
+        "isBloqued": false,
+        "color": randomColor(),
+        "haveError": null,
+        "groups": [{
+            "group": "SA",
+            "teacher": "Miranda",
+            "schedule": ["7:00 - 7:45", "7:45 - 8:30", "8:30 - 9:15"],
+            "days": ["Lunes", "Miércoles", "Viernes"],
+            "quotes": "20"
+        }, {
+            "group": "SB",
+            "teacher": "Zuna Villagomez Ricardo",
+            "schedule": ["10:00 - 10:45", "10:45 - 11:30"],
+            "days": ["Lunes", "Miércoles", "Viernes"],
+            "quotes": "10"
+        }, {
+            "group": "Z2",
+            "teacher": "Mollo Mamani Alberto",
+            "schedule": ["10:00 - 10:45", "10:45 - 11:30"],
+            "days": ["Martes", "Jueves"],
+            "quotes": "03"
+        }]
+    }, {
+        "id": "2",
+        "acronym": "INF333",
+        "subject": "Estructuras Discretas",
+        "isBloqued": false,
+        "color": randomColor(),
+        "haveError": null,
+        "groups": [{
+            "group": "SA",
+            "teacher": "Braulio",
+            "schedule": ["7:00 - 7:45", "7:45 - 8:30", "8:30 - 9:15"],
+            "days": ["Lunes", "Miércoles", "Viernes"],
+            "quotes": "20"
+        }, {
+            "group": "Z5",
+            "teacher": "Velasco Guaman Angel",
+            "schedule": ["10:00 - 10:45", "10:45 - 11:30"],
+            "days": ["Lunes", "Miércoles", "Viernes"],
+            "quotes": "45"
+        }, {
+            "group": "NH",
+            "teacher": "Lazo Arteaga Carlos",
+            "schedule": ["10:00 - 10:45", "10:45 - 11:30"],
+            "days": ["Martes", "Jueves"],
+            "quotes": "01"
+        }]
+    }];
 
     const Siglas = [
         "INF123",
@@ -17,14 +75,15 @@ function Inscripction() {
     ];
 
     const options = [
-        { id: "1", columna1: 'option1', columna2: 'Opción 1' , columna3:'eriktrolo'},
-        { id: "2",  columna1: 'option2', columna2: 'Opción 2' },
-        { id: "3",  columna1: 'option3', columna2: 'Opción 3' },
-      ];
-    
-      function handleOptionSelect(option) {
-        console.log('Selected option:', option);
-      }
+        { id: "1", columna1: 'option1', columna2: 'Opción 1', columna3: 'eriktrolo' },
+        { id: "2", columna1: 'option2', columna2: 'Opción 2' },
+        { id: "3", columna1: 'option3', columna2: 'Opción 3' },
+    ];
+
+    const prueba = (valor) => {
+        console.log("antes del valor");
+        console.log(valor);
+    }
 
 
     return (
@@ -54,14 +113,14 @@ function Inscripction() {
                 </nav>
                 <div className="container__content">
                     <div className="container__column">
-                        {Materias.map((materia, indice) => (
-                            <Dropdown triggerText={materia} sigla={Siglas[indice]}>
-                                <ScheduleDetails data={options}></ScheduleDetails>
+                        {Materiass.map((materia, indice) => (
+                            <Dropdown key={materia.id} triggerText={materia.subject} sigla={materia.acronym}>
+                                <ScheduleDetails data={materia} result={prueba}></ScheduleDetails>
                             </Dropdown>
                         ))}
                     </div>
                     <div className="container__column2">
-                        <Schedule/>
+                        <Schedule />
                     </div>
                 </div>
             </div>

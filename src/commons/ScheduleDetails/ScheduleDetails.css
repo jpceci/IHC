@@ -4,16 +4,19 @@
 }
 
 .rows {
-    justify-content: left;
     width: 10%
 }
 
-.table {
-    border-radius: 10px;
-    border: 1px solid transparent;
+.description {
+    text-align: left;
+    font-weight: 400;
+    border-top-color: #A4A4A4;
+    border-bottom-color: #A4A4A4;
+    color: #5c5c5c;
+    border-right-color: #F5F5F5;
+    border-left-color: #F5F5F5;
 }
 
-.table td {
-    border: 1px solid black;
-    border-radius: 10px;
+.quotas {
+    float: right;
 }
