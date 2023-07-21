@@ -1,4 +1,3 @@
-a virtual assistant for blind people.
 
 # Getting Started with Create React App
 
